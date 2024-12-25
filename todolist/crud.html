@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Presensi Sederhana</title>
+    <link rel="stylesheet" href="styles.css"> <!-- Link ke file CSS terpisah -->
+</head>
+<body>
+    <h1 style="text-align: center;">Selamat Datang di Presensi Sederhana Ini</h1>
+
+    <div style="text-align: center; margin-bottom: 20px;">
+        <button id="addTaskBtn">Presensi Dulu</button>
+    </div>
+
+    <table>
+        <thead>
+            <tr>
+                <th>No</th>
+                <th>Nama</th>
+                <th>NIP</th>
+                <th>Jam</th> <!-- Mengganti 'Bukti Photo' dengan 'Jam' -->
+                <th>Actions</th>
+            </tr>
+        </thead>
+        <tbody id="itemTable">
+            <!-- Rows will be dynamically added here -->
+        </tbody>
+    </table>
+
+    <!-- Modal -->
+    <div id="myModal" class="modal">
+        <div class="modal-content">
+            <span class="close">&times;</span>
+            <h2>Presensi Pegawai</h2>
+            <form id="taskForm">
+                <label for="name">Nama:</label><br>
+                <input type="text" id="name" required><br>
+                <label for="nip">NIP:</label><br>
+                <input type="number" id="nip" required><br>
+                <label for="jam">Jam (HH:MM):</label><br>
+                <input type="datetime-local" id="jam" placeholder="Contoh: 07:30" required><br><br>
+                <button type="submit">Simpan</button>
+            </form>
+        </div>
+    </div>
+
+    <script src="crud.js"></script> <!-- Link ke file JavaScript terpisah -->
+</body>
+</html>
